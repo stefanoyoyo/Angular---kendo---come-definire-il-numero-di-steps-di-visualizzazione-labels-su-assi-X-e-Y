@@ -16,7 +16,7 @@ import { ValueAxisLabels } from '@progress/kendo-angular-charts';
           <kendo-chart-value-axis>
               <!-- Definisco colore e numero di steps dell'asse Y -->
               <kendo-chart-value-axis-item [labels]="valueAxisLabels">
-                <kendo-chart-category-axis-item-labels color="#deb456" [step]="3">
+                <kendo-chart-category-axis-item-labels color="#deb456" [step]="this.yAxisLabelsSteps">
                 </kendo-chart-category-axis-item-labels>
                 <!--                       ^^^^^^^^
                      It is also possible to bind all settings to a field.
@@ -38,4 +38,15 @@ export class AppComponent {
     public valueAxisLabels: ValueAxisLabels = {
       font: 'bold 16px Arial, sans-serif'
     };
+
+    yAxisLabelsSteps = 3;
+
+    
+    constructor() {
+      setTimeout(() => {
+        console.log('fire')
+        this.yAxisLabelsSteps = 2;
+      }, 5000)
+    }
+
 }
