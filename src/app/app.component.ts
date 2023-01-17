@@ -45,7 +45,7 @@ export class AppComponent {
     constructor() {
       setTimeout(() => {
         console.log('fire')
-        this.yAxisLabelsSteps = 4;
+        this.yAxisLabelsSteps = 2;
       }, 3000)
     }
 
