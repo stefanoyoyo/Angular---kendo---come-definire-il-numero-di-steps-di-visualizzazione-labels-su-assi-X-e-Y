@@ -39,14 +39,14 @@ export class AppComponent {
       font: 'bold 16px Arial, sans-serif'
     };
 
-    yAxisLabelsSteps = 3;
+    yAxisLabelsSteps = 1;
 
     
     constructor() {
       setTimeout(() => {
         console.log('fire')
-        this.yAxisLabelsSteps = 2;
-      }, 5000)
+        this.yAxisLabelsSteps = 4;
+      }, 3000)
     }
 
 }
